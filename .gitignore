@@ -1,0 +1,10 @@
+# Python server file
+server.py
+
+# Node.js server and dependencies
+server.js
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db 

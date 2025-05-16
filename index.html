@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiragana Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="instructions-section">
+      <h1>Hiragana Quiz</h1>
+      <p>Test your knowledge of Japanese Hiragana! You'll get 10 random characters and must match them with their correct romaji.</p>
+    </div>
+
+    <div id="instructions" class="quiz-section">
+      <div class="name-input-section">
+        <h2>Enter Your Name to Start</h2>
+        <div class="name-input">
+          <input type="text" id="player-name" placeholder="Enter your name" required>
+          <div id="name-error" class="error-message"></div>
+        </div>
+        <button onclick="validateAndStart()">Start Quiz</button>
+      </div>
+    </div>
+
+    <div id="quiz" class="quiz-section" style="display:none;">
+      <div id="timer">Time: 0s</div>
+      <div class="quiz-box">
+        <div id="question-count"></div>
+        <h2 id="hiragana-char" class="hiragana-display"></h2>
+        <div id="options"></div>
+        <div id="feedback"></div>
+      </div>
+    </div>
+
+    <div id="result" class="quiz-section" style="display:none;">
+      <h2>Quiz Complete!</h2>
+      <div id="final-score"></div>
+      <div id="completion-time"></div>
+      <h3>Leaderboard</h3>
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button onclick="restartQuiz()">Try Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
