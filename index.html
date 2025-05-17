@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Hiragana Quiz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,31 +25,33 @@
     </div>
 
     <div id="quiz" class="quiz-section" style="display:none;">
-      <div id="timer">Time: 0s</div>
+      <div id="timer" class="timer">Time: 0s</div>
       <div class="quiz-box">
-        <div id="question-count"></div>
+        <div id="question-count" class="question-count"></div>
         <h2 id="hiragana-char" class="hiragana-display"></h2>
-        <div id="options"></div>
-        <div id="feedback"></div>
+        <div id="options" class="options-grid"></div>
+        <div id="feedback" class="feedback"></div>
       </div>
     </div>
 
     <div id="result" class="quiz-section" style="display:none;">
       <h2>Quiz Complete!</h2>
-      <div id="final-score"></div>
-      <div id="completion-time"></div>
+      <div id="final-score" class="result-text"></div>
+      <div id="completion-time" class="result-text"></div>
       <h3>Leaderboard</h3>
-      <table id="leaderboard">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Score</th>
-            <th>Time</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <div class="leaderboard-container">
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
       <button onclick="restartQuiz()">Try Again</button>
     </div>
   </div>
